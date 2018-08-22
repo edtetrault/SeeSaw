@@ -4,9 +4,9 @@
 <link rel="stylesheet"
 href="https://fonts.googleapis.com/css?family=Chewy|Kalam">
 <style>
-body {background-color:#4D9078;}
-p {color:#F2C14E; font-family: 'Kalam', cursive;}
-ul {color:#F2C14E; font-family: 'Kalam', cursive;}
+body {background-color:#eeeeee;}
+p {color:#00e676; font-family: 'Kalam', cursive;}
+ul {color:#e64a19; font-family: 'Kalam', cursive;}
 </style>
 </head>
 <body style="background-color:#4D9078;">

@@ -3,13 +3,13 @@
 <link rel="stylesheet"
 href="https://fonts.googleapis.com/css?family=Chewy|Kalam">
 <style>
-body {background-color:#4D9078;}
-h1 {color:#FE5F55; font-family: 'Chewy', cursive; text-align:center; font-size:300%;}
-p {color:#F2C14E; font-family: 'Kalam', cursive; text-align: center; font-size:105%;}
-form {color:#F2C14E; font-family: 'Kalam', cursive; text-align: center;}
+body {background-color:#eeeeee;}
+h1 {color:#00e676; font-family: 'Chewy', cursive; text-align:center; font-size:300%;}
+p {color:#e64a19; font-family: 'Kalam', cursive; text-align: center; font-size:105%;}
+form {color:#00e676; font-family: 'Kalam', cursive; text-align: center;}
 </style>
 </head>
-<body style="background-color:#4D9078;">
+<body style="background-color:#eeeeee;">
 
 
 
