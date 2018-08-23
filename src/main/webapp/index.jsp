@@ -27,13 +27,9 @@ form {color:#00e676; font-family: 'Kalam', cursive; text-align: center;}
  <br/><br/>
  Email: <input type="text" name="eMail" />
  <br/><br/>
- How old are you?
-     <select name="Age">
-         <option>Younger than 5</option>
-         <option>Between 5 and 10</option>
-         <option>Between 11 and 20</option>
-         <option>21 and wiser</option>
-     </select>
+ Create a username: <input type="text" name="userName" />
+ <br/><br/>
+ Age: <input type="text" name="age"/>
      <br/><br/>
  What kinds of things did you see today? <br/>
     <input type="checkbox" name="topic" value="Animals"> Animals
