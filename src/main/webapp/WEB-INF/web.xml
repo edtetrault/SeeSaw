@@ -12,6 +12,10 @@
     <servlet-name>HelloServlets</servlet-name>
     <servlet-class>servlets.HelloServlets</servlet-class>
   </servlet>
+    <servlet>
+        <servlet-name>MainMenuServlet</servlet-name>
+        <servlet-class>servlets.MainMenuServlet</servlet-class>
+    </servlet>
   <servlet-mapping>
     <servlet-name>HelloServlets</servlet-name>
     <url-pattern>/hello</url-pattern>
@@ -20,4 +24,8 @@
     <servlet-name>RedirectServlet</servlet-name>
     <url-pattern>/redirect</url-pattern>
   </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MainMenuServlet</servlet-name>
+        <url-pattern>/mainmenu</url-pattern>
+    </servlet-mapping>
 </web-app>
