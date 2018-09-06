@@ -1,45 +1,32 @@
 <html>
 <head>
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css?family=Chewy|Kalam">
-<style>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Chewy|Kalam">
+    <style>
 body {background-color:#eeeeee;}
 h1 {color:#00e676; font-family: 'Chewy', cursive; text-align:center; font-size:300%;}
+h3 {color:#00e676; font-family: 'Chewy', cursive; text-align:center; font-size:115%;}
 p {color:#e64a19; font-family: 'Kalam', cursive; text-align: center; font-size:105%;}
 form {color:#00e676; font-family: 'Kalam', cursive; text-align: center;}
 </style>
+<title>Welcome to See-Saw</title>
 </head>
-<body style="background-color:#eeeeee;">
+
+<h1>Welcome!</h1><br><br>
+<h3>See-Saw in an interactive app that helps you remember all the new things you see when you are out exploring by creating flash cards!</h3>
+<br>
+<p>If you would like to make new flash cards click "See" below.</p><br>
+<form style="text-align:center;" action="see-menu.jsp">
+    <input type="submit" value="See">
+</form>
+<br>
+<p>If you would like to look at flash cards you have already created click "Saw" below.</p>
+<form style="text-align:center;" action="SawMenuServlet">
+    <input type="submit" value="Saw">
+</form>
 
 
 
-<h1>Welcome to See-Saw!</h1>
-  <br/>
- <form style="text-align:center;" action="register-response.jsp">
-
- <p>To get started, fill out the information below. If you need help, ask an adult!</p>
- <br/><br/>
- First name: <input type=text" name="firstName" />
-
- <br/><br/>
-
- Last name: <input type="text" name="lastName" />
- <br/><br/>
- Email: <input type="text" name="eMail" />
- <br/><br/>
- Create a username: <input type="text" name="userName" />
- <br/><br/>
- Age: <input type="text" name="age"/>
-     <br/><br/>
- What kinds of things did you see today? <br/>
-    <input type="checkbox" name="topic" value="Animals"> Animals
-  <input type="checkbox" name="topic" value="Vehicles"> Vehicles
-  <input type="checkbox" name="topic" value="People"> People
-  <input type="checkbox" name="topic" value="Activities"> Activities
-    <br/><br/>
-       <input type="submit" value="Submit" />
-
-     </form>
 
 </body>
 </html>

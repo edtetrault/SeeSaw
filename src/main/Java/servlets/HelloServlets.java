@@ -43,13 +43,12 @@ public class HelloServlets extends HttpServlet {
         }
     }
 }
-
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter writer = response.getWriter();
 
         PreparedStatement statement = null;
-        String sql = "INSERT INTO students (name) values (?)";
-        String name = request.getParameter("studentName");
+        String sql = "INSERT INTO animal_cards (animal_id) values (?)";
+        String name = request.getParameter("animal_id");
         try {
             Connection conn = new DBConnector().getConn();
             statement = conn.prepareStatement(sql);
@@ -63,4 +62,5 @@ public class HelloServlets extends HttpServlet {
         }
     }
 
-}
+
+   }

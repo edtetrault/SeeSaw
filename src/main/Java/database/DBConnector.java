@@ -1,7 +1,7 @@
 package database;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+        import java.sql.Connection;
+        import java.sql.DriverManager;
+        import java.sql.SQLException;
 
 
 public class DBConnector {
@@ -9,8 +9,8 @@ public class DBConnector {
     public DBConnector() {
         try {
             this.conn =
-                    DriverManager.getConnection("jdbc:mysql://localhost:3306" +
-            "user=root&password=2015Larry!");
+                    DriverManager.getConnection("jdbc:mysql://localhost:3306/flashcards?" +
+                            "user=root&password=2015Larry!");
 
         } catch (SQLException ex) {
             // handle any errors

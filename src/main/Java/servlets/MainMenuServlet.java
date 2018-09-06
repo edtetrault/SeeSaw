@@ -8,9 +8,9 @@ import database.DBConnector;
 
 public class MainMenuServlet extends HttpServlet {
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void getPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter writer = response.getWriter();
+        writer.print("Hello this is where I will put the web page. eventually.");
 
-        response.sendRedirect("http://localhost:8888/mainmenu");
     }
 }

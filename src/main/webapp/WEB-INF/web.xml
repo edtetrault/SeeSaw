@@ -16,6 +16,10 @@
         <servlet-name>MainMenuServlet</servlet-name>
         <servlet-class>servlets.MainMenuServlet</servlet-class>
     </servlet>
+  <servlet>
+    <servlet-name>SeeAnimalServlet</servlet-name>
+    <servlet-class>servlets.SeeAnimalServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>HelloServlets</servlet-name>
     <url-pattern>/hello</url-pattern>
@@ -26,6 +30,10 @@
   </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MainMenuServlet</servlet-name>
-        <url-pattern>/mainmenu</url-pattern>
+        <url-pattern>/main</url-pattern>
     </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SeeAnimalServlet</servlet-name>
+    <url-pattern>/newanimal</url-pattern>
+  </servlet-mapping>
 </web-app>
