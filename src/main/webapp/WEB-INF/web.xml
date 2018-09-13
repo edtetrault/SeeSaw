@@ -9,6 +9,18 @@
     <servlet-class>servlets.RedirectServlet</servlet-class>
   </servlet>
   <servlet>
+    <servlet-name>CreatedAnimalServlet</servlet-name>
+    <servlet-class>servlets.CreatedAnimalServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SeePersonServlet</servlet-name>
+    <servlet-class>servlets.SeePersonServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SeeVehicleServlet</servlet-name>
+    <servlet-class>servlets.SeeVehicleServlet</servlet-class>
+  </servlet>
+  <servlet>
     <servlet-name>HelloServlets</servlet-name>
     <servlet-class>servlets.HelloServlets</servlet-class>
   </servlet>
@@ -35,5 +47,17 @@
   <servlet-mapping>
     <servlet-name>SeeAnimalServlet</servlet-name>
     <url-pattern>/newanimal</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SeeVehicleServlet</servlet-name>
+    <url-pattern>/newvehicle</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SeePersonServlet</servlet-name>
+    <url-pattern>/newperson</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreatedAnimalServlet</servlet-name>
+    <url-pattern>/animalcreated</url-pattern>
   </servlet-mapping>
 </web-app>

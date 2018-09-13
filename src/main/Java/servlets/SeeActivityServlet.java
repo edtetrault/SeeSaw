@@ -1,14 +1,16 @@
 package servlets;
 
-import javax.servlet.http.*;
-import java.io.*;
-import java.sql.*;
-import java.util.ArrayList;
-import javax.servlet.*;
 import database.DBConnector;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.*;
 
-public class SeeAnimalServlet extends HttpServlet {
+
+public class SeeActivityServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter writer = response.getWriter();
@@ -18,11 +20,11 @@ public class SeeAnimalServlet extends HttpServlet {
         try {
             Connection conn = new DBConnector().getConn();
             statement = conn.createStatement();
-            resultSet = statement.executeQuery("SELECT animal_name FROM animal_cards");
+            resultSet = statement.executeQuery("SELECT activity_two FROM activity_cards");
             writer.print("Hello, ");
             while(resultSet.next()){
-                System.out.println(resultSet.getString("animal_name"));
-                writer.print(resultSet.getString("animal_name") + ", ");
+                System.out.println(resultSet.getString("activity_name"));
+                writer.print(resultSet.getString("activity_name") + ", ");
             }
         } catch (SQLException e) {
             System.out.println(e.getErrorCode());
@@ -48,23 +50,19 @@ public class SeeAnimalServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
 
         PreparedStatement statement = null;
-        String sql = "INSERT INTO animal_cards (animals_one) values (?)";
-        String name = request.getParameter("animals_one");
+        String sql = "INSERT INTO activity_cards (activity_one) values (?)";
+        String name = request.getParameter("activity_one");
          try {
             Connection conn = new DBConnector().getConn();
             statement = conn.prepareStatement(sql);
-            statement.setString(1, "animals_one");
+            statement.setString(1, "activity_one");
             int i=statement.executeUpdate();
             writer.print(i +" records inserted");
 
-             RequestDispatcher dispatcher = request.getRequestDispatcher("animal-created.jsp");
-             dispatcher.forward(request, response);
 
         } catch (SQLException e) {
             System.out.println(e.getErrorCode());
-        } catch (ServletException e) {
-             e.printStackTrace();
-         }
+        }
     }
 
 

@@ -32,6 +32,7 @@ body {
       color: white;
     }
 
+
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -60,7 +61,6 @@ h4 {color:#000000; font-family: 'Chewy', cursive; text-align:center; font-size:1
 p {color:#000000; font-family: 'Kalam', cursive; text-align: center; font-size:100%;}
 form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 </style>
-
 </head>
 <body>
  <div class="topnav">
@@ -69,30 +69,30 @@ form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
               <a href="saw">Saw</a>
               <a href="account">Account</a>
             </div>
-<h3>Tell me some things about the vehicle you are seeing!</h3>
+<h3>Tell me some things about the activity you are seeing!</h3>
 
-<head><title>All About the Vehicle I See</title></head>
+<head><title>All About the Activity I See</title></head>
 
 
-<form action="/newvehicle" method="doPost">
+<form action="/newactivity" method="doPost">
 
-What is it called?<br>
-<input type="text" name="vehicles_one">
+What is the activity called?<br>
+<input type="text" name="activity_one">
 <br>
-Does it go on land, water, or in the air?<br>
-<input type="text" name="vehicles_two">
+Are there rules?<br>
+<input type="text" name="activity_two">
 <br>
-How many wheels does it have?<br>
- <input type="text" name="vehicles_three">
+Do you play it inside or outside?<br>
+ <input type="text" name="activity_three">
      <br>
-What colors does it have?<br>
-<input type="text" name="vehicles_four">
+Do you do the activity with friends or alone?<br>
+<input type="text" name="activity_four">
 <br>
-Where did you see it?<br>
-<input type="text" name="vehicles_five">
+Do you need special supplies to do the activity?<br>
+<input type="text" name="activity_five">
 <br>
-What is your favorite thing about it?<br>
-<input type="text" name="vehicle_six">
+What is your favorite thing about the activity?<br>
+<input type="text" name="activity_six">
 <br>
 
  <button class="button">Save</button>

@@ -31,7 +31,6 @@ body {
       background-color: #00b248;
       color: white;
     }
-
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -54,6 +53,8 @@ body {
   box-shadow: 0 4px #666;
   transform: translateY(4px);
 }
+
+
 h1 {color:#00e676; font-family: 'Chewy', cursive; text-align:center; font-size:300%;}
 h3 {color:#000000; font-family: 'Chewy', cursive; text-align:center; font-size:200%;}
 h4 {color:#000000; font-family: 'Chewy', cursive; text-align:center; font-size:115%;}
@@ -69,35 +70,26 @@ form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
               <a href="saw">Saw</a>
               <a href="account">Account</a>
             </div>
-<h3>Tell me some things about the vehicle you are seeing!</h3>
+<title>Next Steps</title>
+<h3>Your flashcard was saved. What would you like to do next?</h3><br><br>
 
-<head><title>All About the Vehicle I See</title></head>
-
-
-<form action="/newvehicle" method="doPost">
-
-What is it called?<br>
-<input type="text" name="vehicles_one">
-<br>
-Does it go on land, water, or in the air?<br>
-<input type="text" name="vehicles_two">
-<br>
-How many wheels does it have?<br>
- <input type="text" name="vehicles_three">
-     <br>
-What colors does it have?<br>
-<input type="text" name="vehicles_four">
-<br>
-Where did you see it?<br>
-<input type="text" name="vehicles_five">
-<br>
-What is your favorite thing about it?<br>
-<input type="text" name="vehicle_six">
-<br>
-
- <button class="button">Save</button>
-
+<form style="text-align:center;" action="see-animal.jsp">
+    <button class="button">New Animal</button>
 </form>
+<form style="text-align:center;" action="see-menu.jsp">
+    <button class="button">See Menu</button>
+</form>
+
+<form style="text-align:center;" action="saw-menu.jsp">
+    <button class="button">Saw Menu</button>
+</form>
+<form style="text-align:center;" action="index.jsp">
+    <button class="button">Main Menu</button>
+</form>
+<br>
+<h4>We can have fun learning together!</h4>
+
+
 
 </body>
 </html>
