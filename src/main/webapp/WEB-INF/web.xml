@@ -6,7 +6,11 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>RedirectServlet</servlet-name>
-    <servlet-class>servlets.RedirectServlet</servlet-class>
+    <servlet-class>foo.RedirectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SeeAnimalServlet</servlet-name>
+    <servlet-class>servlets.SeeAnimalServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>CreatedAnimalServlet</servlet-name>
@@ -15,6 +19,10 @@
   <servlet>
     <servlet-name>SeePersonServlet</servlet-name>
     <servlet-class>servlets.SeePersonServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SeeVehicleServlet</servlet-name>
+    <servlet-class>servlets.SeeVehicleServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>SeeVehicleServlet</servlet-name>
@@ -31,6 +39,14 @@
   <servlet>
     <servlet-name>SeeAnimalServlet</servlet-name>
     <servlet-class>servlets.SeeAnimalServlet</servlet-class>
+  </servlet>
+    <servlet>
+        <servlet-name>SeeVehicleServlet</servlet-name>
+        <servlet-class>servlets.SeeVehicleServlet</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>SeeActivityServlet</servlet-name>
+    <servlet-class>servlets.SeeActivityServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloServlets</servlet-name>
@@ -57,7 +73,23 @@
     <url-pattern>/newperson</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>CreatedAnimalServlet</servlet-name>
+  <servlet-name>CreatedAnimalServlet</servlet-name>
     <url-pattern>/animalcreated</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SeeAnimalServlet</servlet-name>
+    <url-pattern>/save</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SeeVehicleServlet</servlet-name>
+        <url-pattern>/savevehicle</url-pattern>
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SeePersonServlet</servlet-name>
+    <url-pattern>/saveperson</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SeeActivityServlet</servlet-name>
+    <url-pattern>/saveactivity</url-pattern>
   </servlet-mapping>
 </web-app>

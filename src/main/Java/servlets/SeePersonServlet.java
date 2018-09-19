@@ -1,69 +1,31 @@
 package servlets;
 
-import database.DBConnector;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import javax.servlet.http.*;
+import java.io.*;
 import java.sql.*;
+import java.util.ArrayList;
+import javax.servlet.*;
+import database.DBConnector;
+import database.PersoncardDAO;
 
 
 public class SeePersonServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         PrintWriter writer = response.getWriter();
 
-        ResultSet resultSet = null;
-        Statement statement = null;
+        PersoncardDAO PersoncardDAO = new PersoncardDAO();
+
         try {
-            Connection conn = new DBConnector().getConn();
-            statement = conn.createStatement();
-            resultSet = statement.executeQuery("SELECT person_two FROM person_cards");
-            writer.print("Hello, ");
-            while(resultSet.next()){
-                System.out.println(resultSet.getString("person_name"));
-                writer.print(resultSet.getString("person_name") + ", ");
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getErrorCode());
-        }finally {
-            if (resultSet != null) {
-                try {
-                    resultSet.close();
-                } catch (SQLException sqlEx) {
-                    System.out.println(sqlEx);
-                }
-            }
-
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException sqlEx) {
-                    System.out.println(sqlEx);
-                }
-            }
-        }
-    }
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        PrintWriter writer = response.getWriter();
-
-        PreparedStatement statement = null;
-        String sql = "INSERT INTO person_cards (person_one) values (?)";
-        String name = request.getParameter("person_one");
-         try {
-            Connection conn = new DBConnector().getConn();
-            statement = conn.prepareStatement(sql);
-            statement.setString(1, "person_one");
-            int i=statement.executeUpdate();
-            writer.print(i +" records inserted");
-
+            PersoncardDAO.savePersonFlashcard(request.getParameter("people_one"), request.getParameter("people_two"),request.getParameter("people_three"),request.getParameter("people_four"),request.getParameter("people_five"),request.getParameter("people_six"));
 
         } catch (SQLException e) {
-            System.out.println(e.getErrorCode());
+            e.printStackTrace();
         }
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("person-created.jsp");
+        dispatcher.forward(request, response);
     }
-
-
 }
+

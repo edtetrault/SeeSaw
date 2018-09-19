@@ -1,69 +1,31 @@
 package servlets;
 
-import database.DBConnector;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import javax.servlet.http.*;
+import java.io.*;
 import java.sql.*;
+import java.util.ArrayList;
+import javax.servlet.*;
+import database.DBConnector;
+import database.vehiclecardDAO;
 
 
 public class SeeVehicleServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         PrintWriter writer = response.getWriter();
 
-        ResultSet resultSet = null;
-        Statement statement = null;
+        vehiclecardDAO vehiclecardDAO = new vehiclecardDAO();
+
         try {
-            Connection conn = new DBConnector().getConn();
-            statement = conn.createStatement();
-            resultSet = statement.executeQuery("SELECT vehicle_two FROM vehicle_cards");
-            writer.print("Hello, ");
-            while(resultSet.next()){
-                System.out.println(resultSet.getString("vehicle_name"));
-                writer.print(resultSet.getString("vehicle_name") + ", ");
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getErrorCode());
-        }finally {
-            if (resultSet != null) {
-                try {
-                    resultSet.close();
-                } catch (SQLException sqlEx) {
-                    System.out.println(sqlEx);
-                }
-            }
-
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException sqlEx) {
-                    System.out.println(sqlEx);
-                }
-            }
-        }
-    }
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        PrintWriter writer = response.getWriter();
-
-        PreparedStatement statement = null;
-        String sql = "INSERT INTO vehicle_cards (vehicle_one) values (?)";
-        String name = request.getParameter("vehicle_one");
-         try {
-            Connection conn = new DBConnector().getConn();
-            statement = conn.prepareStatement(sql);
-            statement.setString(1, "vehicle_one");
-            int i=statement.executeUpdate();
-            writer.print(i +" records inserted");
-
+            vehiclecardDAO.saveVehicleFlashcard(request.getParameter("vehicle_one"), request.getParameter("vehicle_two"),request.getParameter("vehicle_three"),request.getParameter("vehicle_four"),request.getParameter("vehicle_five"),request.getParameter("vehicle_six"));
 
         } catch (SQLException e) {
-            System.out.println(e.getErrorCode());
+            e.printStackTrace();
         }
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("vehicle-created.jsp");
+        dispatcher.forward(request, response);
     }
-
-
 }
+

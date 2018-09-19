@@ -64,32 +64,32 @@ form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 </head>
 <body>
  <div class="topnav">
-              <a class="active" href="main">Home</a>
-              <a href="see-menu">See</a>
-              <a href="saw">Saw</a>
-              <a href="account">Account</a>
+              <a class="active" href="index.jsp">Home</a>
+              <a href="see-menu.jsp">See</a>
+              <a href="saw-menu.jsp">Saw</a>
+              <a href="account.jsp">Account</a>
             </div>
 <h3>Tell me some things about the vehicle you are seeing!</h3>
 
 <head><title>All About the Vehicle I See</title></head>
 
 
-<form action="/newvehicle" method="doPost">
+<form action="/savevehicle" method="post">
 
 What is it called?<br>
-<input type="text" name="vehicles_one">
+<input type="text" name="vehicle_one">
 <br>
 Does it go on land, water, or in the air?<br>
-<input type="text" name="vehicles_two">
+<input type="text" name="vehicle_two">
 <br>
 How many wheels does it have?<br>
- <input type="text" name="vehicles_three">
+ <input type="text" name="vehicle_three">
      <br>
 What colors does it have?<br>
-<input type="text" name="vehicles_four">
+<input type="text" name="vehicle_four">
 <br>
 Where did you see it?<br>
-<input type="text" name="vehicles_five">
+<input type="text" name="vehicle_five">
 <br>
 What is your favorite thing about it?<br>
 <input type="text" name="vehicle_six">

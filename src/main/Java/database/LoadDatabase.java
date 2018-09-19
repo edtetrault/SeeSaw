@@ -10,7 +10,7 @@ public class LoadDatabase {
     public LoadDatabase() {
         try {
             conn =
-                    DriverManager.getConnection("jdbc:mysql://localhost:3306?" +
+                    DriverManager.getConnection("jdbc:mysql://localhost:3306/flashcards" +
                             "user=root&password=2015Larry!");
 
 

@@ -73,8 +73,8 @@ form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 <title>Next Steps</title>
 <h3>Your flashcard was saved. What would you like to do next?</h3><br><br>
 
-<form style="text-align:center;" action="see-animal.jsp">
-    <button class="button">New Animal</button>
+<form style="text-align:center;" action="see-vehicle.jsp">
+    <button class="button">New Vehicle</button>
 </form>
 <form style="text-align:center;" action="see-menu.jsp">
     <button class="button">See Menu</button>

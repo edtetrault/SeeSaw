@@ -64,17 +64,17 @@ form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 </head>
 <body>
  <div class="topnav">
-              <a class="active" href="main">Home</a>
-              <a href="see-menu">See</a>
-              <a href="saw">Saw</a>
-              <a href="account">Account</a>
-            </div>
+               <a class="active" href="index.jsp">Home</a>
+               <a href="see-menu.jsp">See</a>
+               <a href="saw-menu.jsp">Saw</a>
+               <a href="account.jsp">Account</a>
+             </div>
 <h3>Tell me some things about the activity you are seeing!</h3>
 
 <head><title>All About the Activity I See</title></head>
 
 
-<form action="/newactivity" method="doPost">
+<form action="/saveactivity" method="post">
 
 What is the activity called?<br>
 <input type="text" name="activity_one">

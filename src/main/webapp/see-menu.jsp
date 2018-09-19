@@ -65,11 +65,11 @@ form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 </head>
 <body>
  <div class="topnav">
-              <a class="active" href="main">Home</a>
-              <a href="see-menu">See</a>
-              <a href="saw">Saw</a>
-              <a href="account">Account</a>
-            </div>
+               <a class="active" href="index.jsp">Home</a>
+               <a href="see-menu.jsp">See</a>
+               <a href="saw-menu.jsp">Saw</a>
+               <a href="account.jsp">Account</a>
+             </div>
 <h3>What kinds of things did you see today?</h3><br><br>
 <h4>Click on one of the categories below to share more about what new things you got to see today. </h4>
 <br>

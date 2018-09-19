@@ -31,8 +31,6 @@ body {
       background-color: #00b248;
       color: white;
     }
-
-
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -55,26 +53,41 @@ body {
   box-shadow: 0 4px #666;
   transform: translateY(4px);
 }
+
+
 h1 {color:#00e676; font-family: 'Chewy', cursive; text-align:center; font-size:300%;}
 h3 {color:#000000; font-family: 'Chewy', cursive; text-align:center; font-size:200%;}
 h4 {color:#000000; font-family: 'Chewy', cursive; text-align:center; font-size:115%;}
 p {color:#000000; font-family: 'Kalam', cursive; text-align: center; font-size:100%;}
 form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 </style>
+
 </head>
 <body>
- <div class="topnav">
-              <a class="active" href="main">Home</a>
-              <a href="see-menu">See</a>
-              <a href="saw">Saw</a>
-              <a href="account">Account</a>
-            </div>
-<head><title>Look at everything I learned!</title></head>
+            <div class="topnav">
+                          <a class="active" href="index.jsp">Home</a>
+                          <a href="see-menu.jsp">See</a>
+                          <a href="saw-menu.jsp">Saw</a>
+                          <a href="account.jsp">Account</a>
+                        </div>
+<title>Next Steps</title>
+<h3>Your flashcard was saved. What would you like to do next?</h3><br><br>
 
-<h3>Look at everything you learned so far!</h3>
+<form style="text-align:center;" action="see-person.jsp">
+    <button class="button">New Person</button>
+</form>
+<form style="text-align:center;" action="see-menu.jsp">
+    <button class="button">See Menu</button>
+</form>
 
-
-
+<form style="text-align:center;" action="saw-menu.jsp">
+    <button class="button">Saw Menu</button>
+</form>
+<form style="text-align:center;" action="index.jsp">
+    <button class="button">Main Menu</button>
+</form>
+<br>
+<h4>We can have fun learning together!</h4>
 
 
 

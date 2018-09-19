@@ -63,36 +63,36 @@ form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 
 </head>
 <body>
- <div class="topnav">
-              <a class="active" href="main">Home</a>
-              <a href="see-menu">See</a>
-              <a href="saw">Saw</a>
-              <a href="account">Account</a>
+<div class="topnav">
+              <a class="active" href="index.jsp">Home</a>
+              <a href="see-menu.jsp">See</a>
+              <a href="saw-menu.jsp">Saw</a>
+              <a href="account.jsp">Account</a>
             </div>
 <h3>Tell me some things about the person you are meeting!</h3>
 
 <head><title>All About the Person I See</title></head>
 
 
-<form action="/newperson" method="doPost">
+<form action="/saveperson" method="post">
 
 What is their name?<br>
-<input type="text" name="person_one">
+<input type="text" name="people_one">
 <br>
 How did you meet them?<br>
-<input type="text" name="person_two">
+<input type="text" name="people_two">
 <br>
 Are they a family member, friend, or someone else?<br>
- <input type="text" name="person_three">
+ <input type="text" name="people_three">
  <br>
 Are they older or younger than you?<br>
-<input type="text" name="person_four">
+<input type="text" name="people_four">
 <br>
 Where did you see them?<br>
-<input type="text" name="person_five">
+<input type="text" name="people_five">
 <br>
 What is your favorite thing about them?<br>
-<input type="text" name="person_six">
+<input type="text" name="people_six">
 <br>
 
  <button class="button">Save</button>

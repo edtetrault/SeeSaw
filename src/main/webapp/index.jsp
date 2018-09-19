@@ -63,11 +63,12 @@ form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 <title>Welcome to See-Saw</title>
 </head>
 <body>
- <div class="topnav">
-              <a class="active" href="/main">Home</a>
-              <a href="/see-menu">See</a>
-              <a href="/saw-menu">Saw</a>
-              <a href="/account">Account</a>
+<div class="topnav">
+              <a class="active" href="index.jsp">Home</a>
+              <a href="see-menu.jsp">See</a>
+              <a href="saw-menu.jsp">Saw</a>
+              <a href="account.jsp">Account</a>
+
             </div>
 <h1>Welcome!</h1><br><br>
 <h3>See-Saw in an interactive app that helps you remember all the new things you see when you are out exploring by creating flash cards!</h3>

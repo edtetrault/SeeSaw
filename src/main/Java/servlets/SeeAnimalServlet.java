@@ -6,66 +6,26 @@ import java.sql.*;
 import java.util.ArrayList;
 import javax.servlet.*;
 import database.DBConnector;
+import database.animalcardDAO;
 
 
-public class SeeAnimalServlet extends HttpServlet {
+    public class SeeAnimalServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        PrintWriter writer = response.getWriter();
 
-        ResultSet resultSet = null;
-        Statement statement = null;
-        try {
-            Connection conn = new DBConnector().getConn();
-            statement = conn.createStatement();
-            resultSet = statement.executeQuery("SELECT animal_name FROM animal_cards");
-            writer.print("Hello, ");
-            while(resultSet.next()){
-                System.out.println(resultSet.getString("animal_name"));
-                writer.print(resultSet.getString("animal_name") + ", ");
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getErrorCode());
-        }finally {
-            if (resultSet != null) {
-                try {
-                    resultSet.close();
-                } catch (SQLException sqlEx) {
-                    System.out.println(sqlEx);
-                }
+        public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+            PrintWriter writer = response.getWriter();
+
+            animalcardDAO animalcardDAO = new animalcardDAO();
+            //Make a UserDAO variable and from there,
+            try {
+                animalcardDAO.saveAnimalFlashcard(request.getParameter("animals_one"), request.getParameter("animals_two"),request.getParameter("animals_three"),request.getParameter("animals_four"),request.getParameter("animals_five"),request.getParameter("animals_six"));
+                ///Integer.valueOf( request.getParameter("metArtist")), Integer.valueOf(request.getParameter("talkedToArtist")));
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
 
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException sqlEx) {
-                    System.out.println(sqlEx);
-                }
-            }
+            RequestDispatcher dispatcher = request.getRequestDispatcher("animal-created.jsp");
+            dispatcher.forward(request, response);
         }
     }
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        PrintWriter writer = response.getWriter();
 
-        PreparedStatement statement = null;
-        String sql = "INSERT INTO animal_cards (animals_one) values (?)";
-        String name = request.getParameter("animals_one");
-         try {
-            Connection conn = new DBConnector().getConn();
-            statement = conn.prepareStatement(sql);
-            statement.setString(1, "animals_one");
-            int i=statement.executeUpdate();
-            writer.print(i +" records inserted");
-
-             RequestDispatcher dispatcher = request.getRequestDispatcher("animal-created.jsp");
-             dispatcher.forward(request, response);
-
-        } catch (SQLException e) {
-            System.out.println(e.getErrorCode());
-        } catch (ServletException e) {
-             e.printStackTrace();
-         }
-    }
-
-
-}

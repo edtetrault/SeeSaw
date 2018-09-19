@@ -64,30 +64,30 @@ form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 </head>
 <body>
  <div class="topnav">
-              <a class="active" href="main">Home</a>
-              <a href="see-menu">See</a>
-              <a href="saw">Saw</a>
-              <a href="account">Account</a>
-            </div>
+               <a class="active" href="index.jsp">Home</a>
+               <a href="see-menu.jsp">See</a>
+               <a href="saw-menu.jsp">Saw</a>
+               <a href="account.jsp">Account</a>
+             </div>
 <h3>Let's look at some of the new things we saw.</h3><br><br>
 <h4>Click on one of the categories below to read about all the neat things you learned. </h4>
 <br>
 <p>I wanna read all about the new animals I saw!</p>
-<form style="text-align:center;" action="get-flashcards.jsp">
+<form style="text-align:center;" action="get-animal.jsp">
  <button class="button">Animal</button>
 </form>
 <br>
 <p>I want to read all about the new vehicles I saw!</p>
-<form style="text-align:center;" action="get-flashcards.jsp">
+<form style="text-align:center;" action="get-vehicle.jsp">
  <button class="button">Vehicle</button>
 </form>
 <p>I want to read all about the new people I met!</p>
-<form style="text-align:center;" action="get-flashcards.jsp">
+<form style="text-align:center;" action="get-person.jsp">
      <button class="button">Person</button>
 </form>
 <br>
 <p>I want to read all about the new activities I saw!</p>
-<form style="text-align:center;" action="get-flashcards.jsp">
+<form style="text-align:center;" action="get-activity.jsp">
      <button class="button">Activity</button>
 </form>
 
