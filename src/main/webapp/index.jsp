@@ -1,12 +1,17 @@
 <html>
 <head>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Chewy|Kalam">
-    <style>
+   <link rel="stylesheet"
+       href="https://fonts.googleapis.com/css?family=Kalam|Merriweather">
+     <style>
+
 body {
+      background-image: url("mainelephantsmall.png");
+       background-repeat: no-repeat;
+       background-position: left bottom;
+       background-attachment: fixed;
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-    }
+      }
 
     .topnav {
       overflow: hidden;
@@ -31,6 +36,7 @@ body {
       background-color: #00b248;
       color: white;
     }
+
 .button {
   display: inline-block;
   padding: 15px 25px;
@@ -52,17 +58,20 @@ body {
   background-color: #ff5252;
   box-shadow: 0 9px #666;
   transform: translateY(4px);
+
 }
 
-h1 {color:#00e676; font-family: 'Chewy', cursive; text-align:center; font-size:300%;}
-h3 {color:#000000; font-family: 'Chewy', cursive; text-align:center; font-size:200%;}
-h4 {color:#000000; font-family: 'Chewy', cursive; text-align:center; font-size:115%;}
+
+h1 {color:#00e676; font-family: 'Merriweather', serif; text-align:center; font-size:200%;}
+h3 {color:#000000; font-family: 'Merriweather', serif; text-align:center; font-size:125%;}
+h4 {color:#000000; font-family: 'Merriweather', serif;; text-align:center; font-size:105%;}
 p {color:#000000; font-family: 'Kalam', cursive; text-align: center; font-size:100%;}
 form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 </style>
 <title>Welcome to See-Saw</title>
 </head>
 <body>
+
 <div class="topnav">
               <a class="active" href="index.jsp">Home</a>
               <a href="see-menu.jsp">See</a>

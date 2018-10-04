@@ -24,8 +24,9 @@ public class SeeVehicleServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("vehicle-created.jsp");
-        dispatcher.forward(request, response);
-    }
+
+    RequestDispatcher dispatcher = request.getRequestDispatcher("vehicle-created.jsp");
+            dispatcher.forward(request, response);
+}
 }
 

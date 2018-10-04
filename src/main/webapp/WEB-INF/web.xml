@@ -21,13 +21,10 @@
     <servlet-class>servlets.SeePersonServlet</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>SeeVehicleServlet</servlet-name>
-    <servlet-class>servlets.SeeVehicleServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>SeeVehicleServlet</servlet-name>
-    <servlet-class>servlets.SeeVehicleServlet</servlet-class>
-  </servlet>
+  <servlet-name>SeeVehicleServlet</servlet-name>
+  <servlet-class>servlets.SeeVehicleServlet</servlet-class>
+</servlet>
+
   <servlet>
     <servlet-name>HelloServlets</servlet-name>
     <servlet-class>servlets.HelloServlets</servlet-class>
@@ -80,10 +77,10 @@
     <servlet-name>SeeAnimalServlet</servlet-name>
     <url-pattern>/save</url-pattern>
   </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SeeVehicleServlet</servlet-name>
-        <url-pattern>/savevehicle</url-pattern>
-    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SeeVehicleServlet</servlet-name>
+    <url-pattern>/savevehicle</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SeePersonServlet</servlet-name>
     <url-pattern>/saveperson</url-pattern>

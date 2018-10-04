@@ -21,5 +21,19 @@ public class animalcardDAO {
             ps.executeUpdate();
         }
 
+    public void sawAnimalFlashcard(String animals_one,String animals_two, String animals_three, String animals_four, String animals_five, String animals_six) throws SQLException {
+        Connection con = new DBConnector().getConn();
+        PreparedStatement ps =
+                con.prepareStatement("SELECT * FROM animal_cards ORDER BY animals_one");
+
+        ps.setString(1, animals_one);
+        ps.setString(2, animals_two);
+        ps.setString(3, animals_three);
+        ps.setString(4, animals_four);
+        ps.setString(5, animals_five);
+        ps.setString(6, animals_six);
+        ps.executeUpdate();
+    }
+
     }
 

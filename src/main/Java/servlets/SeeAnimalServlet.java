@@ -16,10 +16,10 @@ import database.animalcardDAO;
             PrintWriter writer = response.getWriter();
 
             animalcardDAO animalcardDAO = new animalcardDAO();
-            //Make a UserDAO variable and from there,
+
             try {
                 animalcardDAO.saveAnimalFlashcard(request.getParameter("animals_one"), request.getParameter("animals_two"),request.getParameter("animals_three"),request.getParameter("animals_four"),request.getParameter("animals_five"),request.getParameter("animals_six"));
-                ///Integer.valueOf( request.getParameter("metArtist")), Integer.valueOf(request.getParameter("talkedToArtist")));
+
             } catch (SQLException e) {
                 e.printStackTrace();
             }

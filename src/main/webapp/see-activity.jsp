@@ -1,9 +1,13 @@
 <html>
 <head>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Chewy|Kalam">
+     <link rel="stylesheet"
+         href="https://fonts.googleapis.com/css?family=Kalam|Merriweather">
     <style>
 body {
+background-image: url("elephantleftsmall.png");
+       background-repeat: no-repeat;
+       background-position: left bottom;
+       background-attachment: fixed;
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -55,9 +59,9 @@ body {
   box-shadow: 0 4px #666;
   transform: translateY(4px);
 }
-h1 {color:#00e676; font-family: 'Chewy', cursive; text-align:center; font-size:300%;}
-h3 {color:#000000; font-family: 'Chewy', cursive; text-align:center; font-size:200%;}
-h4 {color:#000000; font-family: 'Chewy', cursive; text-align:center; font-size:115%;}
+h1 {color:#00e676; font-family: 'Merriweather', serif; text-align:center; font-size:200%;}
+h3 {color:#000000; font-family: 'Merriweather', serif; text-align:center; font-size:125%;}
+h4 {color:#000000; font-family: 'Merriweather', serif;; text-align:center; font-size:105%;}
 p {color:#000000; font-family: 'Kalam', cursive; text-align: center; font-size:100%;}
 form {color:#000000; font-family: 'Kalam', cursive; text-align: center;}
 </style>
